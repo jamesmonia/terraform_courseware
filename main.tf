@@ -8,11 +8,13 @@ provider "aws" {
   region = "us-east-1"
   # when changing the region, make sure the number of availability zones is compatible for our architecture
 }
+
+/*
 provider "aws" {
   region = "us-east-2"
   alias  = "us-east-2"
   // alias required when invoking the same provider twice
-}
+} */
 
 # local variables, can be anything that you might use repetitively, no need to declare type
 locals {
@@ -388,9 +390,10 @@ output "public_ip" {
 output "public_dns" {
   value = module.server_subnet_3.public_dns
 }
+/*
 output "size" {
   value = module.server_subnet_3.size
-}
+} */
 
 
 module "server_subnet_1" {

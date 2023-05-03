@@ -5,11 +5,11 @@ terraform {
     bucket = "backend-test-jm"
     key    = "prod/state"
     region = "us-east-1"
-  } */
+  } 
 
   backend "local" {
     path = "terraform.tfstate"
-  }
+  } */
 
   required_providers {
     aws = {
